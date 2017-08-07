@@ -1,9 +1,13 @@
 <h1>Welcome to the longest word-game!</h1>
 <p>Here is your grid:</p>
 <%= @grid.join(' ') %>
-
+<br>
+<br>
+<br>
 <form action="/score">
   <label for="question">What's your word ?</label>
-  <input type="text" id="question" name="word" placeholder="what time is it?">
-  <input type="hidden" value="Go on!">
+  <input type="text" id="question" name="word" placeholder="your word">
+  <input type="button" value="Go on!">
+  <input type="hidden" name="grid" value="<%= @grid.join %>">
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
 </form>

@@ -1,7 +1,11 @@
 <h1>Your word:</h1>
 <p><%= @word %></p>
 
-<h1>Your score:</h1>
-<p><%= @score %></p>
+<ul>
+  <li>Your score: <%= @result[:score]%></li>
+  <li>Your time: <%= @result[:time]%></li>
+  <li><%= @result[:message]%></li>
+</ul>
+
 
 <%= link_to 'Play again', game_path %>
